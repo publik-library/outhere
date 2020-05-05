@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	#title{ 
+		/*position: absolute;*/
+		margin-left: 5vw; 
+		margin-top: 5vh; 
+		width: 25vw; 
+	 }
+	 #wv-image-01{
+	 	width: 90%; 
+	 }
+	 .row{
+	 	width: 100vw;
+	 	height: 80vh; 
+	 }
+	  .row-end{
+	 	width: 100vw;
+	 	height: 10vh; 
+	 }
+	 .block-01{
+	 	display: block;
+	 	float: left;
+	 	width: 50vw; 
+	 }
+	  .block-02{
+	 	display: block;
+	 	float: left;
+	 	width: 50vw; 
+	 }
+	 #close{
+	 	width: 3vw; 
+	 	position: fixed;
+	 	left: 95vw; 
+	 	top: 5vh; 
+	 }
+</style>	
+</head>
+<body>
+
+<img id="title" src="images/west-virginia-01.png">
+<a href="index.html"><img id="close" src="images/close.png"></a>
+
+<div class="row">
+	<div class="block-01">
+		<img id="wv-image-01" src="images/wvirginia-01.jpg">
+	</div>
+	<div class="block-02">
+		<p>
+			<span>Shannon of Huntington, West Virginia</span>
+		</p>
+		<audio id="myAudio" src="audio/babablairMIwebsite_clip.mp3" preload="auto">
+</audio>
+<a onClick="togglePlay()">Click here to hear.</a>
+		<!-- <audio controls>
+		  <source src="audio/babablairMIwebsite_clip.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+		</audio> -->
+	</div>
+</div>
+<div class="row">
+	<div class="block-01">
+		<img id="wv-image-01" src="images/wvirginia-02.jpg">
+	</div>
+	<div class="block-02">
+		<audio controls>
+		  <source src="audio/babablairMIwebsite_clip.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+		</audio>
+	</div>
+</div>
+
+<div class="row-end">
+ <h1>Listen to the entire series on Spotify, iTunes, or Soundcloud.</h1>
+</div>
+
+<script type="text/javascript">
+	var myAudio = document.getElementById("myAudio");
+
+function togglePlay() {
+  return myAudio.paused ? myAudio.play() : myAudio.pause();
+};
+
+</script>
+</body>
+</html>

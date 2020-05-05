@@ -3,6 +3,7 @@
 <head>
 	<title>Out Here</title>
 
+<link rel="stylesheet" href="css/styles.css" type="text/css" media="all"></link>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -26,154 +27,20 @@ $(document).ready(function(){
 
 
 <style type="text/css">
-		html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	overflow-y: hidden;
-}
 
-
-	#map{
-		position: absolute;
-		width: 75vw; 
-		margin-left: 10.5vw; 
-
-	}
-	#logo{
-		position: absolute;
-		width: 50vw; 
-		left: 25vw; 
-		top: 18vw; 
-	}
-
-	.dot {	
-	  width: 2vw;
-	  height: 2vw;
-	  border-radius: 8vw;
-  	 transition: .2s ease-in-out;
-  	 cursor: pointer;
-  	 z-index: 10000; 
-	}
-	.dot-01 {	
-	  width: 2vw;
-	  height: 2vw;
-	  border-radius: 8vw;
-  	 cursor: pointer;
-	}
-	.dot:hover {
-	  transform: scale(1.4) !important; 
-	}
-	#dot-01{
-		position: absolute;
-		background-color: #00FF00; 
-		top: 15.5vw; 
-		left: 59.5vw; 
-	}
-	#dot-02{
-		position: absolute;
-		background-color: #FF00FF; 
-		top: 22vw; 
-		left: 72vw; 
-		 transition: .2s ease-in-out;
-	}
-	#dot-03{
-		position: absolute;
-		background-color: #00FFFF; 
-		top: 37vw; 
-		left: 28vw; 
-	}
-	#dot-01-01{
-		background-color: #00FF00; 
-		display: block;
-		float: left;
-		margin-right: .2vw; 
-	
-	}
-	#dot-02-01{
-		display: block;
-		float: left;
-		background-color: #FF00FF; 
-	
-	}
-	#dot-03-01{
-		background-color: #00FFFF;
-		display: block;
-		float: left; 
-		
-	}
-	#key{
-		position: absolute;
-		top: 75vh; 
-		left: 85vw; 
-		width: 14vw; 
-		height: 30vw; 
-	}
-	.key{
-		height: 2.5vw; 
-		margin-left: .5vw; 
-		display: block;
-		float: left;
-	}
-	#m{
-		margin-right: 2vw;
-	}
-	#key .line{
-		width: 100%; 
-		margin-bottom: 1.5vh; 
-		cursor: pointer;
-	}
-	.line{
-		transition: .2s ease-in-out;
-	}
-	.line:hover{
-		opacity: 0.5; 
-	}
-	#about{
-		position: absolute;
-		width: 6vw; 
-		top: 3vh; 
-		left: 92vw; 
-		transition: .2s ease-in-out;
-		cursor: pointer;
-	}
-	#about:hover{
-		opacity: 0.5; 
-	}
-	#by-line{
-		position: absolute;
-		width: 20vw; 
-		top: 32vw;
-		left: 40vw; 
-	}
 </style>	
 </head>
 <body>
 
 <div id="key">
-	<div class="line line-01">
+	<a href="wv.html"><div class="line line-01">
 		<div id="dot-01-01" class="dot-01"></div>
 		<img id="wv" class="key" src="images/west-virginia-01.png">
-	</div>
-	<div class="line line-02">
+	</div></a>
+	<a href="wv.html"><div class="line line-02">
 		<div id="dot-02-01" class="dot-01"></div>
 		<img id="m" class="key" src="images/michigan-01.png">
-	</div>
+	</div></a>
 	<div class="line line-03">
 		<div id="dot-03-01" class="dot-01"></div>
 		<img id="nm" class="key" src="images/new-mexico-01.png">
