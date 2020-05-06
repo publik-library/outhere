@@ -3,15 +3,34 @@
 <head>
 	<title></title>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
 <style type="text/css">
+	 body { 
+            animation: fadeInAnimation ease 2s; 
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards; 
+        } 
+        @keyframes fadeInAnimation { 
+            0% { 
+                opacity: 0; 
+            } 
+            100% { 
+                opacity: 1; 
+            } 
+        } 
 	#title{ 
-		/*position: absolute;*/
-		margin-left: 5vw; 
-		margin-top: 5vh; 
-		width: 25vw; 
+		position: relative;
+		margin-left: 9vw; 
+		margin-top: 2vh; 
+		margin-bottom: -7vh; 
+		width: 55vw; 
+		z-index: -1 !important; 
 	 }
 	 #wv-image-01{
 	 	width: 90%; 
+	 	margin-left: 5%; 
 	 }
 	 .row{
 	 	width: 100vw;
@@ -19,24 +38,55 @@
 	 }
 	  .row-end{
 	 	width: 100vw;
-	 	height: 10vh; 
+	 	height: 15vh; 
 	 }
 	 .block-01{
 	 	display: block;
 	 	float: left;
-	 	width: 50vw; 
+	 	width: 55vw; 
 	 }
 	  .block-02{
 	 	display: block;
 	 	float: left;
-	 	width: 50vw; 
+	 	width: 45vw; 
+	 	text-align: center; 
 	 }
 	 #close{
 	 	width: 3vw; 
 	 	position: fixed;
 	 	left: 95vw; 
 	 	top: 5vh; 
+	 	transition: .2s ease-in-out;
 	 }
+	 #close:hover{
+		opacity: 0.5; 
+
+	 }
+	 h1{
+	 	text-align: center;
+	 }
+	 #wv-title-01{
+	 	width: 80%; 
+	 	margin-top: 25vh; 
+	 }
+	 #play{
+	 	cursor: pointer;
+	 }
+	 .play{
+	 	width: 3vw; 
+	 	height: 3vw;    
+	 	content:url("images/play.svg");
+	 	transition: .2s ease-in-out;
+	}
+	.pause{
+		
+	    content:url("images/pause.svg");
+	    transition: .2s ease-in-out;
+	}
+	.play:hover{
+		transform: scale(1.1) !important; 
+	}
+	
 </style>	
 </head>
 <body>
@@ -46,15 +96,17 @@
 
 <div class="row">
 	<div class="block-01">
-		<img id="wv-image-01" src="images/wvirginia-01.jpg">
+		<img id="wv-image-01" src="images/wvirginia-01.png">
 	</div>
 	<div class="block-02">
-		<p>
+		<img id="wv-title-01" src="images/wv-01.png"><br>
+		<p>Listent to an excerpt</p>
+		<br>
+		<audio id="myAudio" src="audio/babablairMIwebsite_clip.mp3" preload="auto"></audio>
+		<a id="play" onClick="togglePlay()"><img class="play"></a>
+		<!-- <p>
 			<span>Shannon of Huntington, West Virginia</span>
-		</p>
-		<audio id="myAudio" src="audio/babablairMIwebsite_clip.mp3" preload="auto">
-</audio>
-<a onClick="togglePlay()">Click here to hear.</a>
+		</p> -->		
 		<!-- <audio controls>
 		  <source src="audio/babablairMIwebsite_clip.mp3" type="audio/mpeg">
 		Your browser does not support the audio element.
@@ -64,12 +116,12 @@
 <div class="row">
 	<div class="block-01">
 		<img id="wv-image-01" src="images/wvirginia-02.jpg">
-	</div>
-	<div class="block-02">
-		<audio controls>
-		  <source src="audio/babablairMIwebsite_clip.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-		</audio>
+	</div>	
+
+	<div class="block-02">		
+		<img id="wv-title-01" src="images/wv-01.png"><br>
+		<audio id="myAudio" src="audio/babablairMIwebsite_clip.mp3" preload="auto"></audio>
+		<a onClick="togglePlay()">Click here to hear.</a>
 	</div>
 </div>
 
@@ -83,6 +135,10 @@
 function togglePlay() {
   return myAudio.paused ? myAudio.play() : myAudio.pause();
 };
+$("#play").click(function(){
+	$('img.play').toggleClass('pause');
+  });
+
 
 </script>
 </body>
