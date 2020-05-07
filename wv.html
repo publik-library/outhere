@@ -177,10 +177,12 @@
     background-color: #FF00FF;
     left: 0px;
     top: 99vh;
-    width: 0px;
+   width: 0px;
+     max-width: 100vw; 
+    /*width: 0px;*/
      max-width: 100vw; 
     height: 1vh;
-    display: none; 
+    /*display: none; */
     
   }
   .timeline02 {
@@ -271,7 +273,7 @@ var myAudio02 = document.getElementById("myAudio02");
 
 function togglePlay01() {
   return myAudio01.paused ? myAudio01.play() : myAudio01.pause();
-  return myAudio01.played ? myAudio02.pause() : myAudio02.pause();
+  
 
 };
 function togglePlay02() {
@@ -283,10 +285,22 @@ function togglePlay02() {
 //   });
 
 //////////////// play01
+var myAudio01 = document.getElementById("myAudio01");
+
+ $('.play01').click(function() {
+        myAudio02.pause(); 
+        $('.play02').delay( 200 ).fadeIn( "fast" );
+ 		 $('.pause02').fadeOut( "fast" );          
+    });
 $( ".play01" ).click(function() {
+  $('.timeline02').stop();
   $('.timeline01').delay( 200 ).fadeIn( "fast" );
   $('.timeline02').fadeOut( "fast" );
-  $( ".timeline01" ).animate({ width: "+=100vw" }, 90000 );
+  $( ".timeline01" ).animate({ width: "+=100vw" }, 90000, function () {
+        $('.pause01').fadeOut( "fast" );
+        $('.play01').delay( 200 ).fadeIn( "fast" );
+        $( ".timeline01" ).css("width", "0px");
+    }) 
   $('.pause01').delay( 200 ).fadeIn( "fast" );
   $('.play01').fadeOut( "fast" );
   
@@ -303,10 +317,22 @@ $( ".pause01" ).click(function() {
 
 
 //////////////// play02
+
+ $('.play02').click(function() {
+        myAudio01.pause();  
+        $('.play01').delay( 200 ).fadeIn( "fast" );
+ 		 $('.pause01').fadeOut( "fast" );      
+    });
 $( ".play02" ).click(function() {
+  $( "#myAudio01" ).stop();
+  $('.timeline01').stop();
   $('.timeline02').delay( 200 ).fadeIn( "fast" );
   $('.timeline01').fadeOut( "fast" );
-  $( ".timeline02" ).animate({ width: "+=100vw" }, 83000 );
+  $( ".timeline02" ).animate({ width: "+=100vw" }, 83000, function () {
+        $('.pause02').fadeOut( "fast" );
+        $('.play02').delay( 200 ).fadeIn( "fast" );
+        $( ".timeline02" ).css("width", "0px");
+    }) 
   $('.pause02').delay( 200 ).fadeIn( "fast" );
   $('.play02').fadeOut( "fast" );
   
