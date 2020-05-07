@@ -15,6 +15,7 @@
             animation-fill-mode: forwards; 
             margin: 0px; 
             width: 100vw; 
+            font-family: baskerville; 
         } 
         @keyframes fadeInAnimation { 
             0% { 
@@ -24,11 +25,16 @@
                 opacity: 1; 
             } 
         } 
+
+      @font-face {
+  font-family: baskerville;
+  src: url("fonts/baskerville.otf");
+}
 	#title{ 
 		position: relative;
 		margin-left: 9vw; 
-		margin-top: 3vh; 
-		margin-bottom: -5vh; 
+		    margin-top: 8vh;
+    margin-bottom: -2vh;
 		width: 45vw; 
 		z-index: -1 !important; 
 	 }
@@ -72,7 +78,7 @@
 	 }
 	 h1{
 	 	text-align: center;
-	 	font-family: georgia; 
+	 	/*font-family: georgia; */
 	 }
 	 #wv-title-01{
 	 	width: 80%; 
@@ -119,14 +125,14 @@
 		transform: scale(1.1) !important; 
 	}
 	p{	text-align: center; 
-		font-family: georgia; 
-		color: grey; 
+		/*font-family: georgia; */
+		/*color: grey; */
 	}
 	#dot-01{
 		position: absolute;
 		background-color: #FF00FF; 
-		top: 55.5vw; 
-		left: 59.5vw; 
+		top: 15vw; 
+		left: 76vw; 
 	}
 	.dot {	
 	  width: 5.5vw;
@@ -142,7 +148,7 @@
 	}
 	#state img{
 		width: 65%; 
-		margin-left: 20%; 
+		margin-left: 30%; 
 
 	}
 	#copyright{
@@ -205,26 +211,44 @@
   .pause01{
   	display: none; 
   }
+  #blurb-01{
+  	    width: 35vw;
+    text-align: left;
+    margin-left: 14.4vw;
+    margin-bottom: 12vh;
+    font-size: 1.3vw;
+    line-height: 1.8vw; 
+  }
+  #blurb-02{
+  	    width: 35vw;
+    text-align: left;
+    margin-left: 10vw;
+    margin-bottom: -15vh;
+    font-size: 1.3vw;
+    line-height: 1.8vw; 
+  }
+  #words-01{
+  	width: 20vw; 
+
+  }
+    #words-02{
+  	width: 12vw; 
+
+  }
 </style>	
 </head>
 <body>
-
+<div id="dot-01" class="dot"></div>
 <div class="timeline01"></div>
 <div class="timeline02"></div>
-
-
-<!-- <div id="dot-01" class="dot"></div> -->
-<!-- <div id="audioplayer">
-  <div id="timeline">    
-  		  <div id="playhead"></div>
-  </div>
-
-</div> -->
-<div id="timeline"></div>
-
+<a href="index.html"><img id="close" src="images/close.png"></a>
 
 <img id="title" src="images/west-virginia-01.png">
-<a href="index.html"><img id="close" src="images/close.png"></a>
+<p id="blurb-01">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+	<br><br>
+	       <img id="words-01" src="images/writing-01.jpg">
+</p>
+
 
 <div class="row">
 	<div class="block-01">
@@ -241,8 +265,13 @@
 	</div>
 </div>
 
+<p id="blurb-02">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat
+	<br><br>
+	       <img id="words-02" src="images/writing-02.jpg">
+	</p>
 <div id="state">
-		<img id="wv-image-01" src="images/wv-map.jpg">
+	
+		<img id="wv-image-01" src="images/wv-map.png">
 </div>
 
 <div class="row">
@@ -280,13 +309,8 @@ function togglePlay02() {
   return myAudio02.paused ? myAudio02.play() : myAudio02.pause();
 };
 
-// $("#pbutton01").click(function(){
-// 	$('img.play01').toggleClass('pause01');
-//   });
 
 //////////////// play01
-var myAudio01 = document.getElementById("myAudio01");
-
  $('.play01').click(function() {
         myAudio02.pause(); 
         $('.play02').delay( 200 ).fadeIn( "fast" );
@@ -317,7 +341,6 @@ $( ".pause01" ).click(function() {
 
 
 //////////////// play02
-
  $('.play02').click(function() {
         myAudio01.pause();  
         $('.play01').delay( 200 ).fadeIn( "fast" );
@@ -347,11 +370,6 @@ $( ".pause02" ).click(function() {
    
 });
 
-
-
-// $("#pbutton02").click(function(){
-// 	$('img.play02').toggleClass('pause02');
-//   });
 
 </script>
 
