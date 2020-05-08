@@ -33,13 +33,10 @@ time, mark, audio, video {
                 opacity: 1; 
             } 
         } 
-
-
 	#map{
 		position: absolute;
 		width: 75vw; 
 		margin-left: 10.5vw; 
-
 	}
 	#logo{
 		position: absolute;
@@ -47,12 +44,12 @@ time, mark, audio, video {
 		left: 25vw; 
 		top: 18vw; 
 	}
-
 	.dot {	
 	  width: 2vw;
 	  height: 2vw;
 	  border-radius: 8vw;
   	 transition: .2s ease-in-out;
+  	 -webkit-transition: .2s ease-in-out;
   	 cursor: pointer;
   	 z-index: 10000; 
 	}
@@ -64,6 +61,7 @@ time, mark, audio, video {
 	}
 	.dot:hover {
 	  transform: scale(1.4) !important; 
+	  -webkit-transform: scale(1.4) !important; 
 	}
 	#dot-01{
 		position: absolute;
@@ -77,6 +75,7 @@ time, mark, audio, video {
 		top: 22vw; 
 		left: 72vw; 
 		 transition: .2s ease-in-out;
+		 -webkit-transition: .2s ease-in-out;
 	}
 	#dot-03{
 		position: absolute;
@@ -87,21 +86,17 @@ time, mark, audio, video {
 	#dot-01-01{
 		background-color: #00FF00; 
 		display: block;
-		float: left;
-		
-	
+		float: left;		
 	}
 	#dot-02-01{
 		display: block;
 		float: left;
-		background-color: #FF00FF; 
-	
+		background-color: #FF00FF; 	
 	}
 	#dot-03-01{
 		background-color: #00FFFF;
 		display: block;
-		float: left; 
-		
+		float: left; 		
 	}
 	#key{
 		position: absolute;
@@ -126,6 +121,7 @@ time, mark, audio, video {
 	}
 	.line{
 		transition: .2s ease-in-out;
+		-webkit-transition: .2s ease-in-out;
 	}
 	.line:hover{
 		opacity: 0.5; 
@@ -136,6 +132,7 @@ time, mark, audio, video {
 		top: 3vh; 
 		left: 92vw; 
 		transition: .2s ease-in-out;
+		-webkit-transition: .2s ease-in-out;
 		cursor: pointer;
 	}
 	#about:hover{
