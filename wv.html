@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title></title>
+	<meta content="width=device-width, initial-scale=1" name="viewport" http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -30,6 +31,11 @@
   font-family: baskerville;
   src: url("fonts/baskerville.otf");
 }
+
+/*desktop styles*/
+@media screen and (min-width: 768px) {
+
+
 	#title{ 
 		    position: relative;
     margin-left: 29vw;
@@ -220,6 +226,10 @@
     line-height: 1.8vw;
     hyphens: auto; 
   }
+  #blurb-01 p img{
+  	width: 5%; 
+
+  }
   #blurb-02{
   	    width: 35vw;
     text-align: center;
@@ -238,6 +248,170 @@
   	width: 12vw; 
 
   }
+}
+  /*mobile styles*/
+
+@media screen and (max-width: 769px) {
+
+	#title{ 
+		    position: relative;
+    margin-left: 5vw;
+    margin-top: 10vh;
+    margin-bottom: 0vh;
+    width: 90vw;
+    z-index: -1 !important; 
+	 }
+	  #blurb-01{
+  	width: 90vw;
+    text-align: center;
+    margin-left: 5vw;
+    margin-bottom: 5vh;
+    font-size: 14px;
+    line-height: 21px;
+    hyphens: auto; 
+  }
+   .row{
+	 	width: 100vw;
+	 	height: 65vh; 
+	 }
+	  .row-end{
+	 	width: 100vw;
+	 	height: 30vh; 
+	 }
+	 .row-end p{
+	 	margin-top: 25vh; 
+	 	font-size: 1.5vw; 
+	 }
+	 .block-01{
+	 	display: block;
+	 	float: left;
+	 	width: 90vw; 
+	 }
+	  .block-02{
+	 	display: block;
+	 	float: left;
+	 	width: 90vw; 
+	 	text-align: center; 
+	 }
+	 #close{
+	 	width: 8vw; 
+	 	position: fixed;
+	 	left: 88vw; 
+	 	top: 5vh; 
+	 	transition: .2s ease-in-out;
+	 }
+	 #wv-image-01{
+	 	width: 100%; 
+	 	margin-left: 5%;
+	 	margin-bottom: 10vh; 
+	 }
+	 #wv-title-01{
+	 	width: 90%;
+	 	margin-left: 10%;  
+	 	margin-top: 5vh; 
+	 }
+	 .block-02 p{
+	 	width: 100%; 
+	 	margin-left: 5%; 
+	 }
+	 .play-button01  {
+	 	cursor: pointer;
+	 }
+	 .play01{
+	 	width: 12vw; 
+	 	height: 12vw;    
+	 	margin-left: 5vw; 
+	 	content:url("images/play.svg");
+	 	transition: .2s ease-in-out;
+	}
+	.pause01{
+		width: 12vw; 
+	 	height: 12vw;   
+	    content:url("images/pause.svg");
+	    transition: .2s ease-in-out;
+	    display: none; 
+	}
+	.play01:hover{
+		transform: scale(1.1) !important; 
+	}
+	.pause01:hover{
+		transform: scale(1.1) !important; 
+	}
+	.play-button02  {
+	 	cursor: pointer;
+	 }
+	
+	 .play02{
+	 	width: 12vw; 
+	 	height: 12vw;    
+	 	margin-left: 5vw; 
+	 	content:url("images/play.svg");
+	 	transition: .2s ease-in-out;
+	}
+	.pause02{
+		width: 12vw; 
+	 	height: 12vw;   
+	    content:url("images/pause.svg");
+	    transition: .2s ease-in-out;
+	    display: none; 
+	}
+	.play02:hover{
+		transform: scale(1.1) !important; 
+	}
+	
+	#pbutton01{
+		/*margin-left: 43%; */
+	}
+	p{	text-align: center; 
+		/*font-family: georgia; */
+		/*color: grey; */
+	}
+	
+	.audio-buttons{
+		width: 100%; 
+	}
+	 #blurb-02{
+  	    width: 90vw;
+	    text-align: center;
+	    hyphens: auto; 
+	    margin-top: 5vh; 
+	    margin-left: 5vw;
+	    font-size: 14px;
+    line-height: 21px;
+  }
+   #words-01{
+  	width: 8vw; 
+
+  }
+   #words-02{
+  	width: 8vw; 
+
+  }
+   .row-end{
+	 	width: 90%;
+	 	margin-left: 5%; 
+	 	height: 20vh; 
+	 }
+	 .row-end p{
+	 	margin-top: 10vh; 
+	 	font-size: 21px;
+	 	line-height: 30px; 
+	 }
+	 .dot {	
+	  width: 10vw;
+	  height: 10vw;
+	  border-radius: 8vw;
+  	 transition: .2s ease-in-out;
+  	 cursor: pointer;
+  	 z-index: 10000; 
+	}
+	 #dot-01 {
+    position: absolute;
+    background-color: #FF00FF;
+    top: 10vw;
+    left: 13vw;
+}
+}	
 </style>	
 </head>
 <body>
@@ -262,9 +436,10 @@
 		<p>Listen to an excerpt</p>
 		<br>
 		<audio id="myAudio01"  src="audio/shannonWVwebsiteclip.mp3" preload="true"></audio>
-		<a  id="pbutton01" onClick="togglePlay01()"><img class="play01"></a>
-		<a  id="pbutton01" onClick="togglePlay01()"><img class="pause01"></a>
-	
+		<div class="audio-buttons">
+			<a  id="pbutton01" onClick="togglePlay01()"><img class="play01"></a>
+			<a  id="pbutton01" onClick="togglePlay01()"><img class="pause01"></a>
+		</div>
 	</div>
 </div>
 
