@@ -32,9 +32,18 @@
   src: url("fonts/baskerville.otf");
 }
 
+
 /*desktop styles*/
 @media screen and (min-width: 768px) {
-
+	a{
+		text-decoration: none; 
+		color: black; 
+		border-bottom: .08vw solid black;
+		transition: .2s ease-in-out;
+	}
+	a:hover{
+		opacity: 0.5; 
+	}
 
 	#title{ 
 		    position: relative;
@@ -252,6 +261,15 @@
   /*mobile styles*/
 
 @media screen and (max-width: 769px) {
+	a{
+		text-decoration: none; 
+		color: black; 
+		border-bottom: .8px solid black;
+		transition: .2s ease-in-out;
+	}
+	a:hover{
+		opacity: 0.5; 
+	}
 
 	#title{ 
 		    position: relative;
@@ -285,13 +303,16 @@
 	 .block-01{
 	 	display: block;
 	 	float: left;
-	 	width: 90vw; 
+	 	width: 90vw;
+		margin-bottom: -5vh;
+
 	 }
 	  .block-02{
 	 	display: block;
 	 	float: left;
 	 	width: 90vw; 
 	 	text-align: center; 
+	 	margin-bottom: 5vh; 
 	 }
 	 #close{
 	 	width: 8vw; 
@@ -376,6 +397,7 @@
 	    hyphens: auto; 
 	    margin-top: 5vh; 
 	    margin-left: 5vw;
+	    margin-bottom: 8vh; 
 	    font-size: 14px;
     line-height: 21px;
   }
@@ -437,8 +459,8 @@
 		<br>
 		<audio id="myAudio01"  src="audio/shannonWVwebsiteclip.mp3" preload="true"></audio>
 		<div class="audio-buttons">
-			<a  id="pbutton01" onClick="togglePlay01()"><img class="play01"></a>
-			<a  id="pbutton01" onClick="togglePlay01()"><img class="pause01"></a>
+			<div  id="pbutton01" onClick="togglePlay01()"><img class="play01"></div>
+			<div id="pbutton01" onClick="togglePlay01()"><img class="pause01"></div>
 		</div>
 	</div>
 </div>
@@ -462,13 +484,13 @@
 		<p>Listen to an excerpt</p>
 		<br>
 		<audio id="myAudio02" src="audio/coraWVwebsiteclip.mp3" preload="auto"></audio>
-		<a  id="pbutton02" onClick="togglePlay02()"><img class="play02"></a>
-		<a  id="pbutton02" onClick="togglePlay02()"><img class="pause02"></a>
+		<div  id="pbutton02" onClick="togglePlay02()"><img class="play02"></div>
+		<div  id="pbutton02" onClick="togglePlay02()"><img class="pause02"></div>
 	</div>
 </div>
 
 <div class="row-end">
- <p>Listen to the entire series on Spotify, iTunes, or Soundcloud.</p>
+ <p>Listen to the entire series on <a href="" target="_blank">Spotify</a>, <a href="" target="_blank">iTunes</a>, or <a href="" target="_blank">Soundcloud</a>.</p>
 </div>
 
 <p id="copyright">© Kyana Gordon</p>
