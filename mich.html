@@ -28,6 +28,10 @@
             } 
         } 
 
+        .type{
+        	mix-blend-mode: multiply; 
+        }
+
       @font-face {
   font-family: baskerville;
   src: url("fonts/baskerville.otf");
@@ -47,11 +51,11 @@
 	}
 
 	#title{ 
-		    position: relative;
-    margin-left: 29vw;
+	position: relative;
+    margin-left: 38vw;
     margin-top: 8vh;
     margin-bottom: -5vh;
-    width: 45vw;
+    width: 28vw;
     z-index: -1 !important; 
 	 }
 	 #wv-image-01{
@@ -97,12 +101,14 @@
 	 	/*font-family: georgia; */
 	 }
 	 #wv-title-01{
-	 	width: 80%; 
+	 	width: 70%; 
 	 	margin-top: 25vh; 
+
 	 }
 	  #wv-title-02{
-	 	width: 65%; 
+	 	width: 90%; 
 	 	margin-top: 25vh; 
+
 	 }
 	 .play-button01  {
 	 	cursor: pointer;
@@ -150,7 +156,7 @@
 	}
 	#dot-01{
 		position: absolute;
-    background-color: #FF00FF;
+    background-color: #00FF00;
     top: 10vw;
     left: 13vw;
 	}
@@ -447,7 +453,8 @@
 <div class="timeline02"></div>
 <a href="index.html"><img id="close" src="images/close.png"></a>
 
-<img id="title" src="images/west-virginia-01.png">
+<img id="title" src="images/michigan-01.png">
+
 <p id="blurb-01">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
 	<br><br>
 	       <img id="words-01" src="images/writing-01.jpg">
@@ -456,10 +463,11 @@
 
 <div class="row">
 	<div class="block-01">
-		<img id="wv-image-01" src="images/wvirginia-01.png">
+		<img id="wv-image-01" src="images/mich-01-01.png">
 	</div>
 	<div class="block-02">
-		<img id="wv-title-01" src="images/wv-01.png"><br>
+		<img id="wv-title-01" class="type" src="images/mich-type-01.png"><br>
+	
 		<p>Listen to an excerpt</p>
 		<br>
 		<audio id="myAudio01"  src="audio/shannonWVwebsiteclip.mp3" preload="true"></audio>
@@ -481,11 +489,11 @@
 
 <div class="row">
 	<div class="block-01">
-		<img id="wv-image-01" src="images/wv-02.png">
+		<img id="wv-image-01" src="images/mich-02-01.png">
 	</div>	
 
 	<div class="block-02">		
-		<img id="wv-title-02" src="images/wv-type-02.png"><br>
+		<img id="wv-title-02" src="images/mich-type-02.png"><br>
 		<p>Listen to an excerpt</p>
 		<br>
 		<audio id="myAudio02" src="audio/coraWVwebsiteclip.mp3" preload="auto"></audio>

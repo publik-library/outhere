@@ -23,7 +23,7 @@ time, mark, audio, video {
  body { /*
             animation: fadeInAnimation ease 2s; 
             animation-iteration-count: 1; 
-            animation-fill-mode: forwards; */
+            animation-fill-mode: forwards; 
         } 
         @keyframes fadeInAnimation { 
             0% { 
@@ -31,7 +31,7 @@ time, mark, audio, video {
             } 
             100% { 
                 opacity: 1; 
-            } 
+            } */
         } 
 	#map{
 		position: absolute;
