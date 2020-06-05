@@ -518,20 +518,15 @@ track{
 		<p>Listen to an excerpt</p>
 		<br>
 
-		<audio id="myAudio02"  preload="auto">
-			<source  src="audio/coraWVwebsiteclip.mp3" preload="true">
-			<track  id="trk" kind="subtitles" srclang="en" src="audio/coraWVwebsiteclip.mp3.vtt" default  />
+		<audio id="myAudio02"  preload="auto" source  src="audio/coraWVwebsiteclip.mp3" preload="true">
+			<track  id="trk02" kind="subtitles" srclang="en" src="audio/coraWVwebsiteclip.mp3.vtt" default  />
 		</audio>
 
-		<br/><div id="lyrics">p</div><br/>
+		<br/><div id="lyrics-02">p</div><br/>
 
 		<div  id="pbutton02" onClick="togglePlay02()"><img class="play02"></div>
 		<div  id="pbutton02" onClick="togglePlay02()"><img class="pause02"></div>
 	</div>
-
-	<audio id="myAudio02" src="audio/coraWVwebsiteclip.mp3" preload="auto"></audio>
-		<div  id="pbutton02" onClick="togglePlay02()"><img class="play02"></div>
-		<div  id="pbutton02" onClick="togglePlay02()"><img class="pause02"></div>
 </div>
 
 <div class="row-end">
@@ -619,14 +614,29 @@ $( ".pause02" ).click(function() {
 });
 
 //<![CDATA[
-var lyrics = document.getElementById('lyrics');
-var audio = document.getElementById('audio');
-var track = document.getElementById('trk');
+var lyrics = document.getElementById('lyrics01');
+var audio = document.getElementById('audio01');
+var track = document.getElementById('trk01');
 var textTrack = track.track;
-track.addEventListener("cuechange", cueChange, false);
+track.addEventListener("cuechange01", cueChange, false);
 
-function init(){audio.volume = .3;audio.play();cueChange();}
-function cueChange(){
+function init(){audio.volume = .3;audio.play();cueChange01();}
+function cueChange01(){
+var cues = textTrack.activeCues;
+if (cues.length > 0){
+lyrics.innerHTML = cues[0].text.replace(/\n/g, '<br>');}}
+window.onload = init;
+//]]>
+
+//<![CDATA[
+var lyrics = document.getElementById('lyrics02');
+var audio = document.getElementById('audio02');
+var track = document.getElementById('trk02');
+var textTrack = track.track;
+track.addEventListener("cuechange02", cueChange, false);
+
+function init(){audio.volume = .3;audio.play();cueChange02();}
+function cueChange02(){
 var cues = textTrack.activeCues;
 if (cues.length > 0){
 lyrics.innerHTML = cues[0].text.replace(/\n/g, '<br>');}}
