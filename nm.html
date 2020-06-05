@@ -620,10 +620,10 @@ var lyrics = document.getElementById('lyrics01');
 var audio = document.getElementById('audio01');
 var track = document.getElementById('trk01');
 var textTrack = track.track;
-track.addEventListener("cuechange01", cueChange, false);
+track.addEventListener("cuechange", cueChange, false);
 
 function init(){audio.volume = .3;audio.play();cueChange01();}
-function cueChange01(){
+function cueChange(){
 var cues = textTrack.activeCues;
 if (cues.length > 0){
 lyrics.innerHTML = cues[0].text.replace(/\n/g, '<br>');}}
@@ -635,10 +635,10 @@ var lyrics = document.getElementById('lyrics02');
 var audio = document.getElementById('audio02');
 var track = document.getElementById('trk02');
 var textTrack = track.track;
-track.addEventListener("cuechange02", cueChange, false);
+track.addEventListener("cuechange", cueChange, false);
 
 function init(){audio.volume = .3;audio.play();cueChange02();}
-function cueChange02(){
+function cueChange(){
 var cues = textTrack.activeCues;
 if (cues.length > 0){
 lyrics.innerHTML = cues[0].text.replace(/\n/g, '<br>');}}
