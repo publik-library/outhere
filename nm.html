@@ -540,8 +540,8 @@ track{
 <script type="text/javascript">
 
 
-var myAudio01 = document.getElementById("myAudio01");
-var myAudio02 = document.getElementById("myAudio02");
+var Audio01 = document.getElementById("myAudio01");
+var Audio02 = document.getElementById("myAudio02");
 
 function togglePlay01() {
   return myAudio01.paused ? myAudio01.play() : myAudio01.pause();
@@ -549,13 +549,13 @@ function togglePlay01() {
 
 };
 function togglePlay02() {
-  return myAudio02.paused ? myAudio02.play() : myAudio02.pause();
+  return Audio02.paused ? Audio02.play() : Audio02.pause();
 };
 
 
 //////////////// play01
  $('.play01').click(function() {
-        myAudio02.pause(); 
+        Audio02.pause(); 
         $('.play02').delay( 200 ).fadeIn( "fast" );
  		 $('.pause02').fadeOut( "fast" );          
     });
@@ -585,7 +585,7 @@ $( ".pause01" ).click(function() {
 
 //////////////// play02
  $('.play02').click(function() {
-        myAudio01.pause();  
+        Audio01.pause();  
         $('.play01').delay( 200 ).fadeIn( "fast" );
  		 $('.pause01').fadeOut( "fast" );      
     });
