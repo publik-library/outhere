@@ -634,13 +634,13 @@ window.onload = init;
 
 <script type="text/javascript">
 //<![CDATA[
-var lyrics02 = document.getElementById('lyrics02');
+var lyrics = document.getElementById('lyrics02');
 var myAudio02 = document.getElementById('myAudio02');
-var track02 = document.getElementById('trk02');
-var textTrack = track02.track02;
-track02.addEventListener("cuechange", cueChange, false);
+var track = document.getElementById('trk02');
+var textTrack = track.track;
+track.addEventListener("cuechange", cueChange, false);
 
-function init(){myAudio02.volume = .3;myAudio02.play();cueChange();}
+function init(){myAudio02.volume = .3;myAudio02.play();cueChange02();}
 function cueChange(){
 var cues = textTrack.activeCues;
 if (cues.length > 0){
