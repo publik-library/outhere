@@ -626,18 +626,17 @@ if (cues.length > 0){
 lyrics.innerHTML = cues[0].text.replace(/\n/g, '<br>');}}
 window.onload = init01;
 
-
 var lyrics = document.getElementById('lyrics02');
 var myAudio02 = document.getElementById('myAudio02');
-var track = document.getElementById('trk02');
-var textTrack = track.track;
+var track02 = document.getElementById('trk02');
+var textTrack02 = track.track;
 track.addEventListener("cuechange", cueChange, false);
 
 function init01(){myAudio02.volume = .2;myAudio02.play();cueChange();}
 function cueChange(){
-var cues02 = textTrack.activeCues02;
-if (cues02.length > 0){
-lyrics.innerHTML = cues02[0].text.replace(/\n/g, '<br>');}}
+var cues = textTrack02.activeCues;
+if (cues.length > 0){
+lyrics.innerHTML = cues[0].text.replace(/\n/g, '<br>');}}
 window.onload = init01;
 
 </script>
