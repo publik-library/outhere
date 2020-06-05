@@ -522,7 +522,7 @@ track{
 			<track  id="trk02" kind="subtitles" srclang="en" src="audio/coraWVwebsiteclip.mp3.vtt" default  />
 		</audio>
 
-		<br/><div id="lyrics-02">p</div><br/>
+		<br/><div id="lyrics02">p</div><br/>
 
 		<div  id="pbutton02" onClick="togglePlay02()"><img class="play02"></div>
 		<div  id="pbutton02" onClick="togglePlay02()"><img class="pause02"></div>
@@ -614,6 +614,7 @@ $( ".pause02" ).click(function() {
 });
 
 </script>
+
 <script type="text/javascript">
 //<![CDATA[
 var lyrics = document.getElementById('lyrics01');
@@ -630,6 +631,7 @@ lyrics.innerHTML = cues[0].text.replace(/\n/g, '<br>');}}
 window.onload = init;
 //]]>
 </script>
+
 <script type="text/javascript">
 //<![CDATA[
 var lyrics = document.getElementById('lyrics02');
