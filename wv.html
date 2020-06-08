@@ -17,7 +17,7 @@
             margin: 0px; 
             width: 100vw; 
             font-family: baskerville; 
-            background-color: #F5F5F5; 
+            background-color: #ebeae1ff; 
         } 
         @keyframes fadeInAnimation { 
             0% { 
@@ -149,12 +149,23 @@
 		/*color: grey; */
 	}
 	#dot-01{
+		position: absolute;   
+    	top: 10vw;
+    	left: 13vw;
+	}
+	#dot-02{
 		position: absolute;
-    background-color: #FF00FF;
-    top: 10vw;
-    left: 13vw;
+    	margin-left: 41vw;
+    	margin-top: 0vh; 
+
+	}
+	#dot-03{
+		position: absolute;
+    	margin-left: 53vw;
+    	margin-top: 8vh;
 	}
 	.dot {	
+		background-color: #FF00FF;
 	  width: 5.5vw;
 	  height: 5.5vw;
 	  border-radius: 8vw;
@@ -474,8 +485,12 @@
 	<br><br>
 	       <img id="words-02" src="images/writing-02.jpg">
 	</p>
+
+<!-- state drawing	 -->
+
 <div id="state">
-	
+	<div id="dot-02" class="dot"></div>
+	<div id="dot-03" class="dot"></div>
 		<img id="wv-image-01" src="images/wv-map.png">
 </div>
 

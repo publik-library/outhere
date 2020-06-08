@@ -17,7 +17,7 @@
             margin: 0px; 
             width: 100vw; 
             font-family: baskerville; 
-            background-color: #F5F5F5; 
+            background-color: #ebeae1ff; 
         } 
         @keyframes fadeInAnimation { 
             0% { 
@@ -155,12 +155,23 @@
 		/*color: grey; */
 	}
 	#dot-01{
-		position: absolute;
-    background-color: #00FF00;
-    top: 10vw;
-    left: 13vw;
+		position: absolute;    
+   		top: 10vw;
+    	left: 13vw;
 	}
+	#dot-02{
+		position: absolute;    
+    	margin-left: 41vw;
+    	margin-top: 0vh; 
+
+	}
+	#dot-03{
+		position: absolute;
+    	margin-left: 53vw;
+    	margin-top: 8vh;
+    }
 	.dot {	
+		background-color: #00FF00;
 	  width: 5.5vw;
 	  height: 5.5vw;
 	  border-radius: 8vw;
@@ -173,8 +184,8 @@
 		margin-bottom: 15vh; 
 	}
 	#state img{
-		width: 65%; 
-		margin-left: 30%; 
+		width: 75%; 
+		margin-left: 12.5%; 
 
 	}
 	#copyright{
@@ -256,7 +267,7 @@
     hyphens: auto; 
     margin-top: 10vh; 
     margin-left: 10vw;
-    margin-bottom: -15vh;
+    margin-bottom: 15vh;
     font-size: 1.3vw;
     line-height: 1.8vw; 
   }
@@ -453,13 +464,16 @@
 <div class="timeline02"></div>
 <a href="index.html"><img id="close" src="images/close.png"></a>
 
+<!-- intro -->
+
 <img id="title" src="images/michigan-01.png">
 
-<p id="blurb-01">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-	<br><br>
-	       <img id="words-01" src="images/writing-01.jpg">
+		<p id="blurb-01">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+		<br><br>
+	     <img id="words-01" src="images/writing-01.jpg">
 </p>
 
+<!-- row 01 -->
 
 <div class="row">
 	<div class="block-01">
@@ -478,14 +492,22 @@
 	</div>
 </div>
 
+<!-- blurb  -->
+
 <p id="blurb-02">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat
 	<br><br>
 	       <img id="words-02" src="images/writing-02.jpg">
 	</p>
+
+<!-- drawing of state -->
+
 <div id="state">
-	
-		<img id="wv-image-01" src="images/wv-map.png">
+	<div id="dot-02" class="dot"></div>
+	<div id="dot-03" class="dot"></div>
+		<img id="state-image-01" src="images/mich-map.png">
 </div>
+
+<!-- row 02 -->
 
 <div class="row">
 	<div class="block-01">
