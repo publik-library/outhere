@@ -279,6 +279,14 @@
   	width: 12vw; 
 
   }
+  #lyrics01
+	{
+		 height: 6vh;
+	}
+#lyrics02
+	{
+		 height: 6vh;
+	}
 }
   /*mobile styles*/
 
@@ -512,7 +520,7 @@
 		</audio>
 
 		<br/><div id="lyrics01">Listen to an excerpt</div><br/>
-		
+
 		<div class="audio-buttons">
 			<div  id="pbutton01" onClick="togglePlay01()"><img class="play01"></div>
 			<div id="pbutton01" onClick="togglePlay01()"><img class="pause01"></div>
@@ -544,9 +552,13 @@
 
 	<div class="block-02">		
 		<img id="wv-title-02" src="images/mich-type-02.png"><br>
-		<p>Listen to an excerpt</p>
-		<br>
-		<audio id="myAudio02" src="audio/coraWVwebsiteclip.mp3" preload="auto"></audio>
+
+		<audio id="myAudio02"  preload="auto" source  src="audio/racquelleMIwebsiteclip.mp3" preload="true"  “autoplay=false”>		
+			 <track  id="trk02" kind="subtitles" srclang="en" src="audio/racquelleMIwebsiteclip.mp3.vtt" default  />
+		</audio>
+
+		<br/><div id="lyrics02">Listen to an excerpt</div><br/>
+
 		<div  id="pbutton02" onClick="togglePlay02()"><img class="play02"></div>
 		<div  id="pbutton02" onClick="togglePlay02()"><img class="pause02"></div>
 	</div>
@@ -632,6 +644,42 @@ $( ".pause02" ).click(function() {
   $('.pause02').fadeOut( "fast" );
    
 });
+
+
+
+// text to speech player 01
+
+var button01 = document.getElementsByClassName('play01');
+var lyrics01 = document.getElementById('lyrics01');
+var myAudio01 = document.getElementById('myAudio01');
+var track01 = document.getElementById('trk01');
+var textTrack01 = track01.track;
+track01.addEventListener("cuechange", cueChange01, false);
+
+function init01(){myAudio01.volume = .2;myAudio01.play();cueChange01();}
+function cueChange01(){
+var cues01 = textTrack01.activeCues;
+if (cues01.length > 0){
+lyrics01.innerHTML = cues01[0].text.replace(/\n/g, '<br>');}}
+button01.onclick = init01;
+
+
+// text to speech player 02
+
+var button02 = document.getElementsByClassName('play02');
+var lyrics02 = document.getElementById('lyrics02');
+var myAudio02 = document.getElementById('myAudio02');
+var track = document.getElementById('trk02');
+var textTrack = track.track;
+track.addEventListener("cuechange", cueChange, false);
+
+function init(){myAudio02.volume = .2;myAudio02.play();cueChange();}
+function cueChange(){
+var cues = textTrack.activeCues;
+if (cues.length > 0){
+lyrics02.innerHTML = cues[0].text.replace(/\n/g, '<br>');}}
+button02.onclick = init;
+
 
 
 </script>
