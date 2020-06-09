@@ -686,7 +686,7 @@ var lyrics02 = document.getElementById('lyrics02');
 var myAudio02 = document.getElementById('myAudio02');
 var track02 = document.getElementById('trk02');
 var textTrack = track.track;
-track02.addEventListener("cuechange", cueChange, false);
+track.addEventListener("cuechange", cueChange, false);
 
 function init(){myAudio02.volume = .2;myAudio02.play();cueChange();}
 function cueChange(){
