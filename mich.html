@@ -507,9 +507,12 @@
 	<div class="block-02">
 		<img id="wv-title-01" class="type" src="images/mich-type-01.png"><br>
 	
-		<p>Listen to an excerpt</p>
-		<br>
-		<audio id="myAudio01"  src="audio/shannonWVwebsiteclip.mp3" preload="true"></audio>
+		<audio id="myAudio01"  preload="auto" source  src="audio/babablairMIwebsite_clip.mp3" preload="true"  “autoplay=false”>		
+			 <track  id="trk01" kind="subtitles" srclang="en" src="audio/babablairMIwebsite_clip.mp3.vtt" default  />
+		</audio>
+
+		<br/><div id="lyrics01">Listen to an excerpt</div><br/>
+		
 		<div class="audio-buttons">
 			<div  id="pbutton01" onClick="togglePlay01()"><img class="play01"></div>
 			<div id="pbutton01" onClick="togglePlay01()"><img class="pause01"></div>
