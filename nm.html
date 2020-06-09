@@ -690,9 +690,9 @@ track.addEventListener("cuechange", cueChange, false);
 
 function init(){myAudio02.volume = .2;myAudio02.play();cueChange();}
 function cueChange(){
-var cues = textTrack02.activeCues;
-if (cues.length > 0){
-lyrics02.innerHTML = cues[0].text.replace(/\n/g, '<br>');}}
+var cues02 = textTrack02.activeCues;
+if (cues02.length > 0){
+lyrics02.innerHTML = cues02[0].text.replace(/\n/g, '<br>');}}
 button02.onclick = init;
 
 
