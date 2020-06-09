@@ -664,6 +664,7 @@ $( ".pause02" ).click(function() {
 
 // text to speech player 01
 
+var button02 = document.getElementsByClassName('play01');
 var lyrics = document.getElementById('lyrics01');
 var myAudio01 = document.getElementById('myAudio01');
 var track = document.getElementById('trk01');
@@ -675,23 +676,23 @@ function cueChange(){
 var cues = textTrack.activeCues;
 if (cues.length > 0){
 lyrics.innerHTML = cues[0].text.replace(/\n/g, '<br>');}}
-window.onload = init01;
+button02.onclick = init01;
 
 
 // text to speech player 02
 
 var button02 = document.getElementsByClassName('play02');
-var lyrics = document.getElementById('lyrics02');
+var lyrics02 = document.getElementById('lyrics02');
 var myAudio02 = document.getElementById('myAudio02');
-var track = document.getElementById('trk02');
-var textTrack = track.track;
+var track02 = document.getElementById('trk02');
+var textTrack02 = track.track02;
 track.addEventListener("cuechange", cueChange, false);
 
 function init(){myAudio02.volume = .2;myAudio02.play();cueChange();}
 function cueChange(){
-var cues = textTrack.activeCues;
+var cues = textTrack02.activeCues;
 if (cues.length > 0){
-lyrics.innerHTML = cues[0].text.replace(/\n/g, '<br>');}}
+lyrics02.innerHTML = cues[0].text.replace(/\n/g, '<br>');}}
 button02.onclick = init;
 
 
