@@ -665,17 +665,17 @@ $( ".pause02" ).click(function() {
 // text to speech player 01
 
 var button01 = document.getElementsByClassName('play01');
-var lyrics = document.getElementById('lyrics01');
+var lyrics01 = document.getElementById('lyrics01');
 var myAudio01 = document.getElementById('myAudio01');
-var track = document.getElementById('trk01');
-var textTrack = track.track;
-track.addEventListener("cuechange", cueChange, false);
+var track01 = document.getElementById('trk01');
+var textTrack01 = track.track;
+track01.addEventListener("cuechange", cueChange, false);
 
 function init01(){myAudio01.volume = .2;myAudio01.play();cueChange();}
 function cueChange(){
-var cues = textTrack.activeCues;
+var cues = textTrack01.activeCues;
 if (cues.length > 0){
-lyrics.innerHTML = cues[0].text.replace(/\n/g, '<br>');}}
+lyrics01.innerHTML = cues[0].text.replace(/\n/g, '<br>');}}
 button01.onclick = init01;
 
 
