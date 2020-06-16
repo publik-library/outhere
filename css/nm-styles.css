@@ -17,121 +17,17 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	overflow-y: hidden;
+	/*overflow-y: hidden;*/
 }
 
- body {    animation: fadeInAnimation ease 2s; 
+  body { 
+            animation: fadeInAnimation ease 2s; 
             animation-iteration-count: 1; 
             animation-fill-mode: forwards; 
             margin: 0px; 
             width: 100vw; 
             font-family: baskerville; 
             background-color: #ebeae1ff; 
-        } 
-	
-	.dot {	
-	  width: 2vw;
-	  height: 2vw;
-	  border-radius: 8vw;
-  	 transition: .2s ease-in-out;
-  	 -webkit-transition: .2s ease-in-out;
-  	 cursor: pointer;
-  	 z-index: 10000; 
-	}
-	.dot-01 {	
-	  width: 2vw;
-	  height: 2vw;
-	  border-radius: 8vw;
-  	 cursor: pointer;
-	}
-	.dot:hover {
-	  transform: scale(1.4) !important; 
-	  -webkit-transform: scale(1.4) !important; 
-	}
-	#dot-01{
-		position: absolute;
-		background-color: #00FF00; 
-		top: 15.5vw; 
-		left: 59.5vw; 
-	}
-	#dot-02{
-		position: absolute;
-		background-color: #FF00FF; 
-		top: 22vw; 
-		left: 72vw; 
-		 transition: .2s ease-in-out;
-		 -webkit-transition: .2s ease-in-out;
-	}
-	#dot-03{
-		position: absolute;
-		background-color: #00FFFF; 
-		top: 37vw; 
-		left: 28vw; 
-	}
-	#dot-01-01{
-		background-color: #00FF00; 
-		display: block;
-		float: left;		
-	}
-	#dot-02-01{
-		display: block;
-		float: left;
-		background-color: #FF00FF; 	
-	}
-	#dot-03-01{
-		background-color: #00FFFF;
-		display: block;
-		float: left; 		
-	}
-	#key{
-		position: absolute;
-		top: 75vh; 
-		left: 82vw; 
-		width: 18vw; 
-		height: 30vw; 
-	}
-	.key{
-		height: 3vw; 
-		margin-left: .5vw; 
-		display: block;
-		float: left;
-	}
-	#m{
-		margin-right: 2vw;
-	}
-	#key .line{
-		width: 100%; 
-		margin-bottom: 1.5vh; 
-		cursor: pointer;
-	}
-	.line{
-		transition: .2s ease-in-out;
-		-webkit-transition: .2s ease-in-out;
-	}
-	.line:hover{
-		opacity: 0.5; 
-	}
-	#about{
-		position: absolute;
-		width: 6vw; 
-		top: 3vh; 
-		left: 92vw; 
-		transition: .2s ease-in-out;
-		-webkit-transition: .2s ease-in-out;
-		cursor: pointer;
-	}
-	#about:hover{
-		opacity: 0.5; 
-	}
-	#by-line{
-		position: absolute;
-		width: 20vw; 
-		top: 32vw;
-		left: 40vw; 
-	}
-
-	 	 body { 
-         
         } 
         @keyframes fadeInAnimation { 
             0% { 
@@ -141,6 +37,10 @@ time, mark, audio, video {
                 opacity: 1; 
             } 
         } 
+
+        .type{
+        	mix-blend-mode: multiply; 
+        }
 
       @font-face {
   font-family: baskerville;
@@ -160,28 +60,22 @@ time, mark, audio, video {
 		opacity: 0.5; 
 	}
 
-	#map{
-		position: absolute;
-		width: 75vw; 
-		margin-left: 10.5vw; 
-	}
-	#logo{
-		position: absolute;
-		width: 50vw; 
-		left: 25vw; 
-		top: 18vw; 
-	}
 	#title{ 
-		    position: relative;
-    margin-left: 29vw;
+	position: relative;
+    margin-left: 30vw;
     margin-top: 8vh;
     margin-bottom: -5vh;
-    width: 45vw;
+    width: 40vw;
     z-index: -1 !important; 
 	 }
 	 #wv-image-01{
 	 	width: 90%; 
 	 	margin-left: 5%; 
+	 }
+	 #state-image-01{
+
+	 	width: 90%; 
+	 	margin-left: 0%; 
 	 }
 	 .row{
 	 	width: 100vw;
@@ -222,12 +116,14 @@ time, mark, audio, video {
 	 	/*font-family: georgia; */
 	 }
 	 #wv-title-01{
-	 	width: 80%; 
+	 	width: 70%; 
 	 	margin-top: 25vh; 
+
 	 }
 	  #wv-title-02{
-	 	width: 65%; 
+	 	width: 70%; 
 	 	margin-top: 25vh; 
+
 	 }
 	 .play-button01  {
 	 	cursor: pointer;
@@ -256,14 +152,14 @@ time, mark, audio, video {
 	.play02{
 	 	width: 3vw; 
 	 	height: 3vw;    
-	 	content:url("images/play.svg");
+	 	content:url("../images/play.svg");
 	 	transition: .2s ease-in-out;
 	}
 	.pause02{
 		width: 3vw; 
 	 	height: 3vw;   
 	 	display: none; 
-	    content:url("images/pause.svg");
+	    content:url("../images/pause.svg");
 	    transition: .2s ease-in-out;
 	}
 	.play02:hover{
@@ -274,23 +170,25 @@ time, mark, audio, video {
 		/*color: grey; */
 	}
 	#dot-01{
-		position: absolute;   
+		position: absolute;
+   		background-color: #00FFFF;
     	top: 10vw;
     	left: 13vw;
 	}
 	#dot-02{
 		position: absolute;
-    	margin-left: 38vw;
-    	margin-top: 22vw; 
+    	background-color: #00FFFF;
+    	margin-left: 41vw;
+    	margin-top: 0vw; 
 
 	}
 	#dot-03{
 		position: absolute;
-    	margin-left: 45vw;
-    	margin-top: 30vw; 
+    	background-color: #00FFFF;
+    	margin-left: 53vw;
+    	margin-top: 3vw;
 	}
 	.dot {	
-		background-color: #FF00FF;
 	  width: 5.5vw;
 	  height: 5.5vw;
 	  border-radius: 8vw;
@@ -304,7 +202,7 @@ time, mark, audio, video {
 	}
 	#state img{
 		width: 65%; 
-		margin-left: 30%; 
+		margin-left: 20%; 
 
 	}
 	#copyright{
@@ -316,15 +214,6 @@ time, mark, audio, video {
 /* 	margin: 50px auto auto auto; */
 /*   border: solid; */
 }
-
-#playhead{
-	width: 18px;
-	height: 18px;
-	border-radius: 50%;
-	margin-top: 1px;
-	background: rgba(0, 0, 0,1);
-
-}
 #timeline{
     position:fixed; 
 	width: 0vw;
@@ -335,9 +224,17 @@ time, mark, audio, video {
 	background: rgba(0,0,0,.3);
   
 }
+#playhead{
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	margin-top: 1px;
+	background: rgba(0, 0, 0,1);
+
+}
 .timeline01 {
     position: fixed;
-    background-color: #FF00FF;
+    background-color: #00FFFF;
     left: 0px;
     top: 99vh;
    width: 0px;
@@ -350,7 +247,7 @@ time, mark, audio, video {
   }
   .timeline02 {
     position: fixed;
-    background-color: #FF00FF;
+    background-color: #00FFFF;
     left: 0px;
     top: 99vh;
     width: 0px;
@@ -387,7 +284,7 @@ time, mark, audio, video {
     hyphens: auto; 
     margin-top: 10vh; 
     margin-left: 10vw;
-    margin-bottom: -15vh;
+    margin-bottom: 15vh;
     font-size: 1.3vw;
     line-height: 1.8vw; 
   }
@@ -399,15 +296,23 @@ time, mark, audio, video {
   	width: 12vw; 
 
   }
-    #lyrics01, #lyrics02
+  audio::cue {
+    font-size: 1rem;
+}
+track{
+	font-size: 12px; 
+	position: absolute;
+	left: 0px; 
+	top: 0px; 
+}
+#lyrics01
 	{
-	height: 6vh;
-	
-     font-size: 1.3vw;
-    line-height: 1.8vw; 
-
+		 height: 6vh;
 	}
-
+#lyrics02
+	{
+		 height: 6vh;
+	}
 }
   /*mobile styles*/
 
@@ -482,7 +387,12 @@ time, mark, audio, video {
 	 	margin-left: 10%;  
 	 	margin-top: 5vh; 
 	 }
-	    #wv-title-02{
+	
+	 .block-02 p{
+	 	width: 100%; 
+	 	margin-left: 5%; 
+	 }
+	   #wv-title-02{
 	 	width: 90%;
 	 	margin-left: 10%;  
 	 	margin-top: 5vh; 
@@ -497,17 +407,13 @@ time, mark, audio, video {
 		margin-left: 0%; 
 
 	}
-	 .block-02 p{
-	 	width: 100%; 
-	 	margin-left: 5%; 
-	 }
 	 .play-button01  {
 	 	cursor: pointer;
 	 }
-	 .play01, .play02{
+	 .play01{
 	 	width: 12vw; 
 	 	height: 12vw;    
-	 	
+	 	 
 	 	content:url("../images/play.svg");
 	 	transition: .2s ease-in-out;
 	}
@@ -528,13 +434,13 @@ time, mark, audio, video {
 	 	cursor: pointer;
 	 }
 	
-	/* .play02{
+	 .play02{
 	 	width: 12vw; 
 	 	height: 12vw;    
 	 	
-	 	content:url("images/play.svg");
+	 	content:url("../images/play.svg");
 	 	transition: .2s ease-in-out;
-	}*/
+	}
 	.pause02{
 		width: 12vw; 
 	 	height: 12vw;   
@@ -568,11 +474,11 @@ time, mark, audio, video {
     line-height: 21px;
   }
    #words-01{
-  	width: 8vw; 
+  	width: 50vw; 
 
   }
    #words-02{
-  	width: 8vw; 
+  	width: 50vw; 
 
   }
    .row-end{
@@ -586,7 +492,7 @@ time, mark, audio, video {
 	 	line-height: 30px; 
 	 }
 	 .dot {	
-	  background-color: #FF00FF;
+	 background-color: #00FFFF;
 	  width: 10vw;
 	  height: 10vw;
 	  border-radius: 8vw;
@@ -596,22 +502,21 @@ time, mark, audio, video {
 	}
 	 #dot-01 {
     position: absolute;
-    background-color: #FF00FF;
     top: 10vw;
     left: 13vw;
 }
 	#dot-02{
-		position: absolute;
-    	margin-left: 11vw;
-    	margin-top: 31vw; 
+		position: absolute;    	
+    	margin-left: 32vw;
+    	margin-top: 0vw; 
 
 	}
 	#dot-03{
 		position: absolute;
-    	margin-left: 24vw;
-    	margin-top: 46vw; 
+    	margin-left: 52vw;
+    	margin-top: 5vw;
 	}
-#lyrics01, #lyrics02
+	#lyrics01, #lyrics02
 	{
 	height: 6vh;
 	width: 100%;
@@ -620,19 +525,10 @@ time, mark, audio, video {
     line-height: 21px;
    
 	}
-	#timeline{
-    position:fixed; 
-	width: 0vw;
-	height: 40px;
-/* 	margin-top: 20px; */
-/* 	float: left; */
-/* 	border-radius: 15px; */
-	background: rgba(0,0,0,.3);
-  
-}
+
 .timeline01,  .timeline02  {
     position: fixed;
-    background-color: #FF00FF;
+    background-color: #00FFFF;
     left: 0px;
     top: 99vh;
    width: 0px;
@@ -644,60 +540,4 @@ time, mark, audio, video {
     
   }
 
-  #map{    position: absolute;
-    width: 99vw;
-    margin-left: 0vw;
-    margin-top: 10vh;
-}
-	#logo{
-		    position: absolute;
-    width: 70vw;
-    left: 12vw;
-    top: 40vw;
-	}
-	#by-line{
-	    position: absolute;
-    width: 50vw;
-    top: 64vw;
-    left: 23vw;
-}
-#about{
-	    position: absolute;
-    width: 34vw;
-        top: 85vh;
-    left: 29vw;
-    transition: .2s ease-in-out;
-    -webkit-transition: .2s ease-in-out;
-    cursor: pointer;
-	
-}
-.key {
-        height: 17vw;
-    margin-left: 0vw;
-    margin-left: 5vw;
-    display: block;
-    float: left;
-}
-#key {
-    position: absolute;
-    top: 50vh;
-    left: 10vw;
-    width: 85vw;
-    height: 80vw;
-}
-#key .line {
-    width: 100%;
-    margin-bottom: 2.5vh;
-
-    cursor: pointer;
-}
-
-#key .dot-01 {
-    width: 10vw;
-    height: 10vw;
-    border-radius: 10vw;
-    cursor: pointer;
-    margin-top: 2vh;
-}
-
-}
+}	
