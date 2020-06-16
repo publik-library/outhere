@@ -48,7 +48,7 @@ time, mark, audio, video {
 	  transform: scale(1.4) !important; 
 	  -webkit-transform: scale(1.4) !important; 
 	}
-	#dot-01{
+	/*#dot-01{
 		position: absolute;
 		background-color: #00FF00; 
 		top: 15.5vw; 
@@ -67,7 +67,7 @@ time, mark, audio, video {
 		background-color: #00FFFF; 
 		top: 37vw; 
 		left: 28vw; 
-	}
+	}*/
 	#dot-01-01{
 		background-color: #00FF00; 
 		display: block;
@@ -256,14 +256,14 @@ time, mark, audio, video {
 	.play02{
 	 	width: 3vw; 
 	 	height: 3vw;    
-	 	content:url("images/play.svg");
+	 	content:url("../images/play.svg");
 	 	transition: .2s ease-in-out;
 	}
 	.pause02{
 		width: 3vw; 
 	 	height: 3vw;   
 	 	display: none; 
-	    content:url("images/pause.svg");
+	    content:url("../images/pause.svg");
 	    transition: .2s ease-in-out;
 	}
 	.play02:hover{
