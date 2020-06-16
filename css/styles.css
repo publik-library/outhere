@@ -664,7 +664,7 @@ time, mark, audio, video {
 #about{
 	    position: absolute;
     width: 34vw;
-        top: 75vh;
+        top: 70vh;
     left: 29vw;
     transition: .2s ease-in-out;
     -webkit-transition: .2s ease-in-out;
@@ -680,7 +680,7 @@ time, mark, audio, video {
 }
 #key {
     position: absolute;
-    top: 40vh;
+    top: 37vh;
     left: 10vw;
     width: 85vw;
     height: 80vw;
