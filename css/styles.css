@@ -275,24 +275,24 @@ time, mark, audio, video {
 	}
 	#dot-01{
 		position: absolute;   
-    	top: 10vw;
-    	left: 13vw;
+    	/*top: 10vw;
+    	left: 13vw;*/
 	}
 	#dot-02{
 		position: absolute;
-    	margin-left: 38vw;
-    	margin-top: 22vw; 
+    	/*margin-left: 38vw;
+    	margin-top: 22vw; */
 
 	}
 	#dot-03{
 		position: absolute;
-    	margin-left: 45vw;
-    	margin-top: 30vw; 
+    	/*margin-left: 45vw;
+    	margin-top: 30vw; */
 	}
 	.dot {	
 		background-color: #FF00FF;
-	  width: 5.5vw;
-	  height: 5.5vw;
+	  width: 2.5vw;
+	  height: 2.5vw;
 	  border-radius: 8vw;
   	 transition: .2s ease-in-out;
   	 cursor: pointer;
