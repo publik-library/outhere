@@ -647,24 +647,24 @@ time, mark, audio, video {
   #map{    position: absolute;
     width: 99vw;
     margin-left: 0vw;
-    margin-top: 10vh;
+    /*margin-top: 10vh;*/
 }
 	#logo{
 		    position: absolute;
     width: 70vw;
     left: 12vw;
-    top: 40vw;
+    top: 18vw;
 	}
 	#by-line{
 	    position: absolute;
     width: 50vw;
-    top: 64vw;
+    top: 40vw;
     left: 23vw;
 }
 #about{
 	    position: absolute;
     width: 34vw;
-        top: 85vh;
+        top: 75vh;
     left: 29vw;
     transition: .2s ease-in-out;
     -webkit-transition: .2s ease-in-out;
@@ -680,7 +680,7 @@ time, mark, audio, video {
 }
 #key {
     position: absolute;
-    top: 50vh;
+    top: 40vh;
     left: 10vw;
     width: 85vw;
     height: 80vw;
