@@ -125,9 +125,9 @@ time, mark, audio, video {
 	}
 	#by-line{
 		position: absolute;
-		width: 20vw; 
-		top: 32vw;
-		left: 40vw; 
+    width: 22vw;
+    top: 30vw;
+    left: 38vw;
 	}
 
 	 	 body { 
@@ -272,6 +272,7 @@ time, mark, audio, video {
 	p{	text-align: center; 
 		/*font-family: georgia; */
 		/*color: grey; */
+		font-weight: 800;
 	}
 	#dot-01{
 		position: absolute;   
@@ -369,13 +370,14 @@ time, mark, audio, video {
   	display: none; 
   }
   #blurb-01{
-  	width: 35vw;
+  	width: 45vw;
     text-align: center;
-    margin-left: 35.4vw;
+    margin-left: 30vw;
     margin-bottom: 12vh;
     font-size: 1.3vw;
     line-height: 1.8vw;
-    hyphens: auto; 
+    hyphens: auto;
+    margin-top: 2vh;
   }
   #blurb-01 p img{
   	width: 5%; 
@@ -474,7 +476,7 @@ time, mark, audio, video {
 	 }
 	 #wv-image-01{
 	 	width: 100%; 
-	 	margin-left: 5%;
+	 	margin-left: 0%;
 	 	margin-bottom: 10vh; 
 	 }
 	 #wv-title-01{
@@ -657,10 +659,10 @@ time, mark, audio, video {
     top: 18vw;
 	}
 	#by-line{
-	    position: absolute;
+	 position: absolute;
     width: 50vw;
-    top: 40vw;
-    left: 23vw;
+    top: 35vw;
+    left: 20vw;
 }
 #about{
 	    position: absolute;
