@@ -123,6 +123,9 @@ time, mark, audio, video {
 	#about:hover{
 		opacity: 0.5; 
 	}
+	.italic{
+		font-style: italic;
+	}
 	#by-line{
 		position: absolute;
     width: 22vw;
@@ -142,9 +145,9 @@ time, mark, audio, video {
             } 
         } 
 
-      @font-face {
+  @font-face {
   font-family: baskerville;
-  src: url("../fonts/baskerville.otf");
+  src: url("../fonts/cooperl.ttf");
 }
 
 
