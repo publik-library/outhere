@@ -42,9 +42,9 @@ time, mark, audio, video {
         	mix-blend-mode: multiply; 
         }
 
-      @font-face {
+     @font-face {
   font-family: baskerville;
-  src: url("../fonts/baskerville.otf");
+  src: url("../fonts/cooperl.ttf");
 }
 
 
@@ -270,12 +270,12 @@ time, mark, audio, video {
   	width: 45vw;
     text-align: center;
     margin-left: 30vw;
-    margin-bottom: 12vh;
+    margin-bottom: 5vh;
     font-size: 1.3vw;
     line-height: 1.8vw;
     hyphens: auto;
     margin-top: 2vh; 
-    text-align: left;
+    /*text-align: left;*/
   }
   #blurb-01 p img{
   	width: 5%; 
@@ -312,6 +312,7 @@ track{
 	{
 		 height: 6vh;
 		 font-weight: 800; 
+		 font-size: 1.5vw;
 	}
 #lyrics02
 	{
@@ -348,7 +349,7 @@ track{
     font-size: 14px;
     line-height: 21px;
     hyphens: auto; 
-    text-align: left;
+    /*text-align: left;*/
   }
    .row{
 	 	width: 100vw;
